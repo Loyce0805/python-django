@@ -19,7 +19,7 @@ print(jsondata['row'][0]['LIBRARY_NAME'])
 libData = jsondata.get('row')
 print(libData)
 
-name = libData[0].get('LIBRARY_NAME')
+name = libData[0].get('LIBRARY_NAME')  # 위에 jsondata['row'][0]['LIBRARY_NAME'] 와 동일
 print(name)
 
 datas = []
@@ -31,6 +31,7 @@ for ele in libData:
     imsi = [name, tel, addr]
     datas.append(imsi)
 
+print('---')
 import pandas as pd
 df = pd.DataFrame(datas, columns=['도서관명', '전화', '주소'])
 print(df)
