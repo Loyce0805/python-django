@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>show.html</title>
+</head>
+<body>
+<form action = "/member/show" method="post">{% csrf_token %}
+성별 : <input type="text" name="gender">
+<input type="submit" value="제출">
+</form>
+</body>
+</html>

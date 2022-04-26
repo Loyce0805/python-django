@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{% if gen == "man" %}
+	<p>성별은 : {{ gen }}</p>
+	<img src="../static/image/aaa.jpg">
+{% elif gen == "woman" %}
+	<p>성별은 : {{ gen }}</p>
+	<img src="../static/image/bbb.jpg">
+{% else %}
+	<p>man / woman 만 입력 가능</p>
+{% endif %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+** 친구 자료 입력 **<p/>
+<form action="cgi-bin/friend.py" method="post"/>
+이름 : <input type="text" name="name" /><br>   <!-- css나 자바스크립트에서 쓰고 싶으면 id도 부여하겠지 -->
+전화 : <input type="text" name="phone" /><br>
+성별 : 
+<input type="radio" name="gen" value="남" checked="checked"/>남자
+<input type="radio" name="gen" value="여" />여자
+<br><br>
+<!-- submit은 action="cgi-bin/friend.py"의 파일을 넘기면서 이름전화 등등을 보내는데 그걸 포스트방식으로 함 --> 
+<input type="submit" value="전송"> 
+</form>
+</body>
+</html>

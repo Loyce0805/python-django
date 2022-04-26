@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	document.querySelector("#btnOk").onclick = function(){
+		frm.submit();
+	}
+}
+</script>
+</head>
+<body>
+<table>
+	<tr>
+		<td><img src="/static/images/aaa.jpg" style="width: 30%"/></td>
+		<td>
+		<pre>
+		[릴레이상품]
+		50,400원
+		적립사용가능 상품입니다.
+		</pre>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<form action="cart" name="frm" method="post"> {% csrf_token %}
+				<input type="hidden" name="name" value="남자" >
+				<input type="hidden" name="price" value="50400" >
+				<input type="button" id="btnOk" value="장바구니에 물건담기" >
+				<input type="button" name="홈으로" onclick="history.back()" >
+			</form>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
