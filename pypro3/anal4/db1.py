@@ -3,9 +3,10 @@
 import sqlite3
 
 sql = "create table if not exists mytab(product varchar(10), maker varchar(10), weight real, price integer)"
+# mytab이라는 테이블이 없으면 만드는 거임.
 
-conn=sqlite3.connect(":memory:")    #ram 상에서만 1회용으로 연습
-#conn=sqlite3.connect("testdb")
+conn=sqlite3.connect(":memory:")    # ram 상에서만 1회용으로 연습
+#conn=sqlite3.connect("testdb") # 원래는 db명을 줄 수 있음.
 conn.execute(sql)
 conn.commit()
 
@@ -44,5 +45,5 @@ print(frame)
 print()
 frame.to_sql('mytab', con=conn ,if_exists='append', index=False)
 df3 = pd.read_sql("select * from mytab", conn)
-print(df3)
-print(pd.read_sql("select count(*) as count from mytab", conn)) #연필과 볼펜이 추가됨!
+print(df3)                                    # 연필과 볼펜이 추가됨
+print(pd.read_sql("select count(*) as count from mytab", conn)) 
