@@ -8,16 +8,16 @@ iris_data = pd.read_csv("https://raw.githubusercontent.com/pykwon/python/master/
 print(iris_data.info())
 print(iris_data.head(3))
 
-plt.scatter(iris_data['Sepal.Width'], iris_data['Petal.Width'])
+plt.scatter(iris_data['Sepal.Width'], iris_data['Petal.Width']) # scatter : 산점도
 plt.show()
 
 # pandas의 시각화
 from pandas.plotting import scatter_matrix
 iris_col = iris_data.loc[:, 'Sepal.Width':'Petal.Width']
-scatter_matrix(iris_col, diagonal='kde')    #diagonal='kde':밀도분포
+scatter_matrix(iris_col, diagonal='kde')    # diagonal='kde':밀도분포
 plt.show()
 
 # seaborn
 import seaborn as sns
-sns.pairplot(iris_data, hue='Species', height=2)  #카테고리는 Species로 나눔
+sns.pairplot(iris_data, hue='Species', height=2)  # 카테고리는 Species로 나눔
 plt.show()

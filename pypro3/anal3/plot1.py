@@ -1,5 +1,6 @@
 '''Created on 2022. 4. 20. 7교시~ '''
 # 시각화 : 많은 양의 데이터를 효율적으로 그래프로 만들어 인사이트를 정확하게 얻어낼 수 있다.
+# https://brunch.co.kr/@dimension-value/56 <- 시각화를 해야하는 이유
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,10 +43,10 @@ y_cos = np.cos(x)
 
 # plt.figure(figsize=(10, 5))
 # plt.plot(x, y_sin, 'r')
-# plt.scatter(x, y_cos)
-# plt.xlabel('x축')
-# plt.ylabel('y축')
-# plt.legend(['sine', 'cosine'])
+# plt.scatter(x, y_cos)    # 산점도
+# plt.xlabel('x축')         # x축 이름
+# plt.ylabel('y축')         # y축 이름
+# plt.legend(['sine', 'cosine'])  # 범례 (그래프가 뭘 나타내는지 보여주는거임)
 # plt.show()
 
 

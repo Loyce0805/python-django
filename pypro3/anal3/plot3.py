@@ -12,8 +12,8 @@ plt.show()
 sns.boxplot(y='age', data=titanic, palette='Paired')
 plt.show()
 
-# sns.countplot(x="class", data=titanic)
-sns.countplot(x='class', data=titanic, hue='who') # hue="카테고리형 변수"
+# sns.countplot(x="class", data=titanic)   # 갯수를 세는거라 범주형이어야 함. 갯수를 세주는 countplot 
+sns.countplot(x='class', data=titanic, hue='who') # hue="카테고리형 범주형변수"
 plt.show()
 
 print()
