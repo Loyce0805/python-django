@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>list</title>
+</head>
+<body>
+* 자료 정보 *
+<hr>
+{% if articles.count > 0 %}
+  {% for a in articles%}
+    <b>{{a.id}}</b>  {{a.code}}  {{a.name}}  {{a.price}}  {{a.pub_date}}<br>
+  {% endfor %}
+{% else %}
+자료가 없어요.
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>list</title>
+</head>
+<body>
+직원 자료<br>
+{% if datas %}
+  {{datas|safe}}     <!-- datas| 는 옵션을 달아주는것  -->
+{% endif %}
+<hr>
+부서별 연봉 합 : <br>
+총무부(10) : {{buser_group.sum.10}}<br>
+영업부(20) : {{buser_group.sum.20}}<br>
+전산부(30) : {{buser_group.sum.30}}<br>
+관리부(40) : {{buser_group.sum.40}}<br>
+<br>
+부서별 연봉평균(dict) : <br>
+총무부(10) : {{buser_group.avg.10}}<br>
+영업부(20) : {{buser_group.avg.20}}<br>
+전산부(30) : {{buser_group.avg.30}}<br>
+관리부(40) : {{buser_group.avg.40}}<br>
+<hr>
+부서별 연봉합/평균(DataFrame) : <br>
+{{buser_group2|safe}}
+
+<br>
+<img src="/static/images/buser.png" style="width:200"/>
+</body>
+</html>
