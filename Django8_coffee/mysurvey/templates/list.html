@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>list</title>
+</head>
+<body>
+<h2>커피 브랜드 선호도 조사 결과</h2>
+<a href="http://127.0.0.1:8000/">홈페이지</a>
+<br>
+{% if ctab %}
+	{{ctab | safe }}
+{% endif %}
+<br>
+{% if result %}
+	{{result}}
+{% endif %}
+<br>
+분석에 참여한 데이터 건수 : {{count}}
+<br>
+<img src="/static/images/coffeebar.png" width="500" alt="맛있는 커피"/>
+<br><br>
+<a href="/coffee/survey">설문조사 화면</a>
+</body>
+</html>
